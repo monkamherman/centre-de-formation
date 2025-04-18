@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import pageNoteFound from '/images/not-found-image.png'
+import pageNoteFound from '/404.png'
 import SEO from '@/components/custom/utils/SEO'
 
 const PageError: React.FC = () => {
