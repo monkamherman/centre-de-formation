@@ -1,0 +1,49 @@
+services:
+  # Set up my-app
+  app:
+    build: .
+    image: application_name
+    container_name: application_name
+    ports:
+      - '4000:4000'
+    secrets:
+      - app_env
+    volumes:
+      - ./:/app
+      - ./logs:/app/logs
+    networks:
+      - application name
+    command: ['yarn', 'start']
+
+  # Set up nginx service as reverse proxy
+  nginx:
+    image: nginx:1.27.2-alpine-slim
+    restart: always
+    container_name: application name-nginx
+    volumes:
+      - ./nginx-config:/etc/nginx/conf.d
+      - ./logs/nginx:/var/log/nginx
+    ports:
+      - '8080:80'
+    secrets:
+      - app_env
+    networks:
+      - application name
+    depends_on:
+      - app
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost']
+      interval: 20s
+      timeout: 10s
+      retries: 3
+
+secrets:
+  app_env:
+    file: .env
+
+volumes:
+  nginx-config:
+
+networks:
+  application name:
+    driver: bridge
