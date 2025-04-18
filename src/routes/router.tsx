@@ -33,7 +33,7 @@ const Router = createBrowserRouter([
 					<Header darkMode={false} setDarkMode={function (): void {
 						throw new Error('Function not implemented.')
 					} } />
-					<div className='min-h-[80vh]'>
+					<div className=''>
 						<Outlet />
 					</div>
 					<Footer />

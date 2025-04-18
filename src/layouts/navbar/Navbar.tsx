@@ -122,7 +122,7 @@ const Navbar: React.FC<INavbarProps> = ({ darkMode, setDarkMode }) => {
                 className="md:hidden p-2 rounded-full focus:outline-none"
               >
                 {mobileMenuOpen ? (
-                  <i className="fas fa-times"></i>
+                  <i className="fas fa-times"> </i>
                 ) : (
                   <i className="fas fa-bars"></i>
                 )}

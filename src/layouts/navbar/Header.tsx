@@ -8,7 +8,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
   return (
-    <header className="relative h-screen">
+    <header className="relative z-10">
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
     </header>
   );
