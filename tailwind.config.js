@@ -35,10 +35,11 @@ export default {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
   			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
+			  primary: '#d5a539',
+			  dark: {
+				800: '#121826',
+				900: '#0B0E15',
+			  },
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
@@ -66,16 +67,18 @@ export default {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
-  		fontFamily: {
-  			poppins: [
-  				'Poppins',
-  				'Sans-serif'
-  			]
-  		},
+		  fontFamily: {
+			'heading': ['Space Grotesk', 'sans-serif'],
+			'body': ['Poppins', 'sans-serif'],
+		  },
   		fontSize: {
   			'8xl': '90px'
   		},
   		keyframes: {
+			float: {
+				'0%, 100%': { transform: 'translateY(0)' },
+				'50%': { transform: 'translateY(-20px)' },
+			  },
   			marquee: {
   				from: {
   					transform: 'translateX(0)'
@@ -119,7 +122,8 @@ export default {
   			marquee: 'marquee var(--duration) infinite linear',
   			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
   			'spin-slow': 'spin 4s linear infinite',
-  			meteor: 'meteor 5s linear infinite'
+  			meteor: 'meteor 5s linear infinite',
+			'float': 'float 6s ease-in-out infinite',
   		}
   	}
   },

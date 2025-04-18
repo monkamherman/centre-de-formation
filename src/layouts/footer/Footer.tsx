@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/tooltip"
 import FlickeringGrid from "@/components/ui/flickering-grid";
 import { TextAnimate } from "@/components/ui/text-animate";
+import Newsletter from './NewsLetter';
 // import { FootersLinks, SocialLink } from '@/core/mocks/footer.mock'
 
 /**
@@ -17,11 +18,75 @@ import { TextAnimate } from "@/components/ui/text-animate";
  * */
 
 const Footer: React.FC = () => {
-  return (
-    <footer className='w-full border-t border-t-foreground/80'>
-      footer
+  const quickLinks = [
+    { text: "About Us", link: "#" },
+    { text: "Admissions", link: "#" },
+    { text: "Academics", link: "#" },
+    { text: "Student Life", link: "#" },
+    { text: "News & Events", link: "#" },
+    { text: "Contact Us", link: "#" }
+  ];
 
-      {/* Profile */}
+  const socialLinks = [
+    { icon: "fa-facebook-f", link: "#" },
+    { icon: "fa-twitter", link: "#" },
+    { icon: "fa-instagram", link: "#" },
+    { icon: "fa-linkedin-in", link: "#" },
+    { icon: "fa-youtube", link: "#" }
+  ];
+  return (
+    <footer className="bg-gray-100 dark:bg-dark-900 text-gray-600 dark:text-gray-400">
+            <div className="container mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* About Column */}
+          <div>
+            <div className="flex items-center mb-4">
+              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-3">
+                <i className="fas fa-graduation-cap text-white text-xl"></i>
+              </div>
+              <span className="text-xl font-heading font-bold dark:text-white">
+                Future<span className="text-primary">Academy</span>
+              </span>
+            </div>
+            <p className="mb-4">Innovative education for tomorrow's leaders, thinkers, and creators since 2010.</p>
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => (
+                <a 
+                  key={index}
+                  href={social.link}
+                  className="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
+                >
+                  <i className={`fab ${social.icon}`}></i>
+                </a>
+              ))}
+            </div>
+          </div>
+          
+          {/* Quick Links Column */}
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a href={link.link} className="hover:text-primary transition-colors">
+                    {link.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          {/* Newsletter Column */}
+          <div>
+            <Newsletter />
+          </div>
+        </div>
+        
+        {/* Copyright */}
+        <div className="border-t border-gray-200 dark:border-dark-700 mt-12 pt-8 text-center">
+          <p>&copy; {new Date().getFullYear()} Future Academy. All rights reserved. Designed with <i className="fas fa-heart text-red-500"></i> for education.</p>
+        </div>
+      </div>
       <div className="border-t border-t-foreground/40 w-full px-1 py-[3px] space-x-1 font-light text-sm flex justify-center bg-foreground/50">
         <span>Designed and developped by</span>
 
