@@ -10,6 +10,7 @@ import {
 import FlickeringGrid from '@/components/ui/flickering-grid';
 import { TextAnimate } from '@/components/ui/text-animate';
 import Newsletter from './NewsLetter';
+import ContactInfos from "./Contact";
 // import { FootersLinks, SocialLink } from '@/core/mocks/footer.mock'
 
 /**
@@ -84,7 +85,9 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
+              <div>
+                <ContactInfos/>
+              </div>
           {/* Newsletter Column */}
           <div>
             <Newsletter />
