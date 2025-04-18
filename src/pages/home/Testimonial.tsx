@@ -43,7 +43,7 @@ const Testimonials: React.FC = () => {
                   {[...Array(5)].map((_, i) => (
                     <i 
                       key={i} 
-                      className={`fas ${i < Math.floor(testimonial.rating) ? 'fa-star' : (i === Math.floor(testimonial.rating) && testimonial.rating % 1 !== 0 ? 'fa-star-half-alt' : 'fa-star')`}
+                    //   className={`fas ${i < Math.floor(testimonial.rating) ? 'fa-star' : (i === Math.floor(testimonial.rating) && testimonial.rating % 1 !== 0 ? 'fa-star-half-alt' : 'fa-star')`}
                     ></i>
                   ))}
                 </div>

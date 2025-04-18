@@ -47,8 +47,8 @@ const News: React.FC = () => {
                   <i className="fas fa-calendar-alt mr-2"></i>
                   <span>{item.date}</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">{item.description}</p>
+                <h3 className="text-xl font-semibold mb-3 dark:text-dark-800">{item.title}</h3>
+                <p className="text-gray-600 dark:text-dark-300 mb-4">{item.description}</p>
                 <a href="#" className="text-primary font-medium flex items-center">
                   Read More <i className="fas fa-arrow-right ml-2"></i>
                 </a>

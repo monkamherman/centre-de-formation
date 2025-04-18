@@ -5,7 +5,7 @@ import About from './component/About'
 import WhyChoose from './Wychoose'
 import Facilities from './Facilitie'
 import AcademicStages from './academicStage'
-// import Testimonials from './Testimonial'
+import Testimonials from './Testimonial'
 import News from './New'
 import Facts from './Fact'
 import CTA from '@/components/custom/utils/CTA'
@@ -28,7 +28,7 @@ const Home: React.FC = () => {
                 <AcademicStages />
                 <Facilities />
                 <News />
-                {/* <Testimonials /> */}
+                <Testimonials />
                 <CTA/>
             </>
         </>

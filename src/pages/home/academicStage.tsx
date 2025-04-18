@@ -51,8 +51,8 @@ const AcademicStages = () => {
                 <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
                   {stage.ageRange}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{stage.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">{stage.description}</p>
+                <h3 className="text-xl font-semibold mb-2 dark:text-dark-800">{stage.title}</h3>
+                <p className="text-gray-600 dark:text-dark-300 mb-4 ">{stage.description}</p>
                 <a href="#" className="text-primary font-medium flex items-center">
                   Learn More <i className="fas fa-arrow-right ml-2"></i>
                 </a>
