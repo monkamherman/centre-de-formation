@@ -12,6 +12,7 @@ const HeroSlider = () => {
       bg: "bg-gradient-to-r from-gray-900 to-gray-800",
       buttons: [
         { text: "Explore More", link: "#about", bg: "bg-yellow-500 hover:bg-yellow-600 text-white" },
+        
         { text: "Contact Us", link: "#contact", bg: "bg-white hover:bg-gray-100 text-gray-800" }
       ]
     },
@@ -33,6 +34,7 @@ const HeroSlider = () => {
         { text: "Apply Now", link: "#apply", bg: "bg-yellow-500 hover:bg-yellow-600 text-white" }
       ]
     }
+    
   ];
 
   useEffect(() => {
@@ -74,7 +76,7 @@ const HeroSlider = () => {
   `;
 
   return (
-    <div className="relative h-screen w-full overflow-hidden hero-slider">
+    <div className="relative h-[35rem] w-full overflow-hidden hero-slider">
       <style>{slideStyles}</style>
       
       {slides.map((slide, index) => (

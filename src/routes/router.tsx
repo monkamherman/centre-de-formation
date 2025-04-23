@@ -33,7 +33,7 @@ const Router = createBrowserRouter([
 					<Header darkMode={false} setDarkMode={function (): void {
 						throw new Error('Function not implemented.')
 					} } />
-					<div className=''>
+					<div className='max-w-screen'>
 						<Outlet />
 					</div>
 					<Footer />
